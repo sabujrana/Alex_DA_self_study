@@ -1,6 +1,19 @@
-CREATE DATABASE Parks_and_Recreation;   
+-- Creating Database
+-- Syntax: CREATE DATABASE database_name  
+CREATE DATABASE Parks_and_Recreation;
+
+-- Using database
+-- Syntax: Use database_name      
  USE Parks_and_Recreation;
  
+-- Creating table
+-- Syntax: CREATE TABLE table_name ( 
+-- col1 datatype,
+-- col2 datatype,
+-- col3 datatype,
+-- primary key (col1)
+-- ); 
+
  CREATE TABLE employee_demographics (
   employee_id INT NOT NULL,
   first_name VARCHAR(50),
@@ -19,7 +32,14 @@ CREATE TABLE employee_salary (
   salary INT,
   dept_id INT
 );
+-- Inserting value into created table:
+-- Syntax: Insert INTO table_name(col1, col2, col3)
+-- VALUES
+-- (value1),
+-- (value2),
+-- (value3);
 
+ 
 INSERT INTO employee_demographics (employee_id, first_name, last_name, age, gender, birth_date)
 VALUES
 (1,'Leslie', 'Knope', 44, 'Female','1979-09-25'),
@@ -65,5 +85,8 @@ VALUES
 ('Library'),
 ('Finance');
 
+-- Retrieving data from table
+-- Syntax: Select column_to_retrieve(* for all column)[write: as new_name{if we use alias}]
+-- FROM table_name;  
 SELECT * FROM parks_and_Recreation.employee_demographics;
 SELECT * FROM parks_and_Recreation.parks_departments;

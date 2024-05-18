@@ -1,12 +1,17 @@
 Use Parks_and_Recreation;
 ### Select statement: filter or select actual columns
+
 -- Selecting single column from tabele 
+SELECT first_name 
+FROM employee_demographics;
+
+-- Selecting all column from the table 
 select * from employee_demographics;
 
 -- Selecting multiple column from table
 select first_name, last_name, birth_date from employee_demographics;
 
--- Changing column
+-- Changing column [column value modification as per need]
 select first_name,
 last_name, 
 age,
@@ -20,6 +25,9 @@ from employee_demographics;
  from employee_demographics;
  
 -- Distinct in SQL
+-- Syntax: SELECT DISTINCT column_name
+-- FROM table_name;
+
 select Distinct first_name from employee_demographics;
 
 Select gender from employee_demographics;
@@ -27,8 +35,10 @@ select distinct gender from employee_demographics;
 
 Select distinct first_name, gender from employee_demographics;
 
-#### Where clause: filters the record 
-
+####  Where clause: filters the record 
+-- Syntax: SELECT * 
+-- FROM table_name 
+-- WHERE condition; 
 Select * from employee_salary
 where first_name = 'Leslie';
 
@@ -49,10 +59,12 @@ SELECT * FROM employee_demographics WHERE birth_date > '1985-01-01' and gender =
 SELECT * FROM employee_demographics WHERE birth_date > '1985-01-01' OR gender = 'Female';
 
 -- Isolated conditional statement-- 
+-- SELECT * FROM employee_demographics WHERE last_name = 'Perkins' OR age > 55;
 SELECT * FROM employee_demographics WHERE (last_name = 'Perkins') OR age > 55;
 
 -- Like Statement (pattern matching-> regular expression?? )
- -- %(anything) and _(specific value)
+-- This will only applicable for string comparision 
+--  %(anything) and _(specific value)
  
  SELECT * FROM employee_demographics WHERE first_name LIKE 'Jer%';
  

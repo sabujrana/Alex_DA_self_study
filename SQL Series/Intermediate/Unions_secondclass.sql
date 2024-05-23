@@ -66,5 +66,5 @@ UNION
 SELECT first_name, last_name, 'Higly Paid Employee' AS label
 FROM employee_salary 
 WHERE salary > 70000
-ORDER BY first_name, last_name
+ORDER BY first_name, last_name  
 ;

@@ -1,3 +1,4 @@
+-- Select statement
 SELECT * 
 FROM parks_and_recreation.employee_demographics;
 
@@ -19,4 +20,11 @@ FROM parks_and_recreation.employee_demographics;
 
 SELECT DISTINCT first_name, gender
 FROM parks_and_recreation.employee_demographics;
+
+select * 
+FROM parks_and_recreation.employee_salary;
+
+SELECT dept_id
+FROM parks_and_recreation.employee_salary;
+
 

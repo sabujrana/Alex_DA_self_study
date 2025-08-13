@@ -14,6 +14,9 @@ x Use Parks_and_Recreation;
  
  -- Aliasing:  way to change the name of the column, also used in joins
 
- 
+ SELECT gender, AVG(age) AS avg_age
+ FROM employee_demographics
+ GROUP BY gender
+ HAVING avg_age > 40;
  
  
